@@ -6,7 +6,7 @@ require __DIR__ . '/../../app/db.php';
 class ItemManager
 {
 
-    public function selectAllItems(): array
+    public function selectAll(): array
     {
         $pdo = new \PDO(DSN, USER, PASS);
         $query = "SELECT * FROM item";
