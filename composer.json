@@ -1,0 +1,18 @@
+{
+    "name": "julien/quete_simple_mvc",
+    "description": "quete mvc 2",
+    "authors": [
+        {
+            "name": "Julien Delbez",
+            "email": "julien.delbez@hotmail.fr"
+        }
+    ],
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    }
+
+}
