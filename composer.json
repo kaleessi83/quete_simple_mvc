@@ -1,13 +1,15 @@
 {
-    "name": "julien/quete_simple_mvc",
+    "name": "alicia/quete_simple_mvc",
     "description": "quete mvc 2",
     "authors": [
         {
-            "name": "Julien Delbez",
-            "email": "julien.delbez@hotmail.fr"
+            "name": "Alicia Pilar",
+            "email": "alicia.pilar83@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "nikic/fast-route": "^1.3"
+    },
 
     "autoload": {
         "psr-4": {
