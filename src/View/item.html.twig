@@ -1,10 +1,15 @@
 {% extends 'layout.html.twig' %}
-{% block title %}item{% endblock %}
-{% block content %}
-    <h1>Les items</h1>
-    <ul>
-        {% for item in items %}
-            <li>{{ item.title }}</li>
-        {% endfor %}
-    </ul>
+{% block title %}Liste des items{% endblock %}
+{% block item %}
+
+    <section>
+        <h1>Les items</h1>
+        <ul>
+            {% for item in items %}
+                <li><a href="/item/{{ item.id }}">{{ item.title }}</a><div><a href="/item/edit/{{ item.id }}"><button>Modifier</button></a><form action="/item/delete" method="post"><input type="hidden" value="{{ item.id }}" name="delete"/><input type="submit" value="Supprimer"></form></div></li>
+            {% endfor %}
+        </ul>
+        <a href="item/add">Créer un nouvel item</a>
+    </section>
+
 {% endblock %}

@@ -1,0 +1,14 @@
+<section>
+    <h1>Créer un nouvel item</h1>
+
+    <form method="post" action="">
+        {% if errors.title is defined %}
+            <div>{{ errors.title }}</div>
+        {% endif %}
+        <label for="title">Titre de l'item :</label>
+        <input type="text" name="title" required>
+        <button type="submit">Valider</button>
+    </form>
+
+    <a href='/'>Retour à la liste des items</a>
+</section>

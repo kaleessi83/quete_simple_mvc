@@ -1,0 +1,11 @@
+<section>
+    <h1>Modifier l'Item {{ item.title }}</h1>
+
+    <form method="post" action="">
+        <label for="title">Titre de l'item :</label>
+        <input type="text" name="title" value="{{ item.title }}" required>
+        <button type="submit">Valider</button>
+    </form>
+
+    <a href='/'>Retour à la liste des items</a>
+</section>
