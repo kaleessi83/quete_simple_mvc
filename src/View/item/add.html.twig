@@ -1,14 +1,17 @@
-<section>
-    <h1>Créer un nouvel item</h1>
+{% extends 'layout.html.twig' %}
 
-    <form method="post" action="">
-        {% if errors.title is defined %}
-            <div>{{ errors.title }}</div>
-        {% endif %}
-        <label for="title">Titre de l'item :</label>
-        <input type="text" name="title" required>
-        <button type="submit">Valider</button>
-    </form>
+{% block title %}
+    Add Item
+{% endblock %}
 
-    <a href='/'>Retour à la liste des items</a>
-</section>
+{%  block content %}
+    <section>
+        <h1>Add item</h1>
+        <form method="post" action="/item/add">
+            <label for="item">Item's Name</label>
+            <input type="text" name="item" id="item" value="" />
+            <button type="submit" name="send" >Add</button>
+        </form>
+        <p><a href='/'>Go to Items list</a></p>
+    </section>
+{% endblock %}
